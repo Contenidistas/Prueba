@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REA: Sesgos en la Inteligencia Artificial - DUA</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Barra de Accesibilidad DUA -->
+  <header class="accessibility-bar" role="banner">
+    <div class="container accessibility-controls">
+      <span id="acc-label">Opciones de accesibilidad (DUA):</span>
+      <button id="toggle-contrast" aria-labelledby="acc-label">Alto Contraste</button>
+      <button id="toggle-text-size" aria-labelledby="acc-label">Texto Grande</button>
+    </div>
+  </header>
+
+  <main class="container" id="main-content">
+    <header class="hero">
+      <h1>Comprendiendo y mitigando los sesgos en la Inteligencia Artificial</h1>
+      <p class="subtitle">Recurso Educativo Abierto (REA) bajo el enfoque de Diseño Universal para el Aprendizaje</p>
+    </header>
+
+    <!-- Múltiples formas de representación: Conceptos Clave -->
+    <section class="card-section" aria-labelledby="sec-conceptos">
+      <h2 id="sec-conceptos">1. Conceptos Fundamentales</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>¿Qué es un Sesgo en IA?</h3>
+          <p>Un sesgo en IA ocurre cuando un sistema produce resultados sistemáticamente desproporcionados o injustos debido a prejuicios introducidos en los datos de entrenamiento o en el diseño del algoritmo.</p>
+        </article>
+        <article class="card">
+          <h3>Origen de los Datos</h3>
+          <p>Si los datos históricos reflejan discriminaciones o inequidades sociales, el modelo de IA aprenderá y amplificará dichos patrones en lugar de corregirlos.</p>
+        </article>
+        <article class="card">
+          <h3>Estrategias de Mitigación</h3>
+          <p>Para reducir el sesgo se requiere auditar los datos de entrada, aplicar técnicas de desestigmatización algorítmica y mantener supervisión humana continua.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Múltiples formas de acción y expresión: Simulador Interactivo -->
+    <section class="simulator-section" aria-labelledby="sec-simulador">
+      <h2 id="sec-simulador">2. Simulador de Sesgo en Algoritmos de Selección</h2>
+      <p>Ajusta el nivel de datos históricos con sesgo y observa cómo se ve afectada la tasa de selección entre dos grupos equitativamente capacitados.</p>
+
+      <div class="simulator-controls">
+        <label for="bias-slider">Nivel de Sesgo en Datos de Entrenamiento: <span id="bias-value">50%</span></label>
+        <input type="range" id="bias-slider" min="0" max="100" value="50" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+      </div>
+
+      <div class="simulation-results" aria-live="polite">
+        <div class="group-result">
+          <h4>Grupo A (Históricamente Favorecido)</h4>
+          <div class="bar-container">
+            <div id="bar-a" class="bar" style="width: 75%;">75% Aprobación</div>
+          </div>
+        </div>
+        <div class="group-result">
+          <h4>Grupo B (Históricamente Subrepresentado)</h4>
+          <div class="bar-container">
+            <div id="bar-b" class="bar" style="width: 25%;">25% Aprobación</div>
+          </div>
+        </div>
+      </div>
+      <p id="simulation-analysis" class="analysis-text">Con un 50% de sesgo, la IA perpetúa la disparidad en la selección.</p>
+    </section>
+
+    <!-- Múltiples formas de implicación: Reflexión Guiada -->
+    <section class="reflection-section" aria-labelledby="sec-reflexion">
+      <h2 id="sec-reflexion">3. Preguntas para la Reflexión Crítica</h2>
+      <details>
+        <summary>¿Por qué el sesgo técnico no es solo un problema informático?</summary>
+        <p>Porque las salidas de la IA impactan directamente en decisiones sobre personas reales: contrataciones, créditos bancarios, justicia penal y acceso a la salud.</p>
+      </details>
+      <details>
+        <summary>¿Cómo podemos auditar una salida generada por IA?</summary>
+        <p>Verificando las fuentes, buscando activamente perspectivas contrarias o ausentes, y evaluando si la respuesta mantiene estereotipos sobre colectivos vulnerables.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Licencia: <a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank" rel="noopener noreferrer">Creative Commons Atribución 4.0 Internacional (CC BY 4.0)</a>.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
